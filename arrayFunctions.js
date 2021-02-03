@@ -90,22 +90,25 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
-  let splitShout = shout.split("")
-  
-  splitShout.forEach((element , index) => {
-    if(element === "!"){
-      console.log(index);
-      splitShout.splice(index+1)
-    }
-  });
 
-  let joinShout = splitShout.join('')
+  // ----- Solution 1 ----------
+  // let splitShout = shout.split("")
+  // splitShout.forEach((element , index) => {
+  //   if(element === "!"){
+  //     splitShout.splice(index+1)
+  //   }
+  // });
+  // let joinShout = splitShout.join('')
+  // return joinShout
 
-  return joinShout
-
+  // ---- Salwa Challenge 😈 ----
+  while(shout.endsWith('!!')){
+    shout = shout.slice(0, -1)
+  }
+  return shout
 }
 
-youGottaCalmDown("Hellooooo")
+youGottaCalmDown("Gotta Get Tay-Tay Schwifty!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
 // let x = `hussain`
 // console.log(x.pop());
